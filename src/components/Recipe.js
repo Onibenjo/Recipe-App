@@ -9,8 +9,8 @@ const Recipe = ({
       <div className="card" style={{ height: "100%" }}>
         <img
           src={image_url}
-          style={{ height: "14rem", width: "14rem" }}
-          className="img-card-top"
+          style={{ height: "14rem" }}
+          className="card-img-top"
           alt="Recipe"
         />
         <div className="card-body text-capitalize">
