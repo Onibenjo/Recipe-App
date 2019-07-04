@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <Header title="Amazing Recipes">
-        <Link className="text-uppercase btn btn-secondary btn-lg mt-3">
+        <Link to="/" className="text-uppercase btn btn-secondary btn-lg mt-3">
           search recipes
         </Link>
       </Header>
