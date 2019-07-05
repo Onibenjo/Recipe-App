@@ -4,11 +4,11 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const menuItems = (
-    <div className="collapse navbar-collapse show ml-sm-5 " id="navbarToggler">
+    <div className="collapse show ml-sm-5 " id="navbarToggler">
       <ul
-        className="navbar-nav  mx-auto mt-lg-0 justify-content-center"
+        className="navbar-nav mx-auto mt-lg-0 justify-content-around"
         style={{ flexDirection: "row" }}>
-        <li className="nav-item mx-4">
+        <li className="nav-item mr-2">
           <NavLink
             exact
             to="/"
@@ -20,7 +20,7 @@ const Navbar = () => {
             Home
           </NavLink>
         </li>
-        <li className="nav-item mx-4">
+        <li className="nav-item mx-1">
           <NavLink
             exact
             to="/recipes"
@@ -32,7 +32,7 @@ const Navbar = () => {
             Recipes
           </NavLink>
         </li>
-        <li className="nav-item mx-4">
+        <li className="nav-item ml-2">
           <NavLink
             exact
             to="/404"
