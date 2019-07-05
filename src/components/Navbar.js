@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light">
+    <nav className="navbar navbar-expand-sm navbar-light bg-light justify-content-between ">
       <Link to="/" className="navbar-brand">
         <img src={logo} alt="Recipe App" />
       </Link>
-      <div className="collapse navbar-collaspe show ml-sm-5">
-        <ul className="navbar-nav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div className="collapse navbar-collaspe show ml-sm-5" id="navbarToggler">
+        <ul className="navbar-nav  mr-auto mt-2 mt-lg-0">
           <li className="nav-item">
             <Link to="/" className="nav-link">
               Home
@@ -28,6 +31,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
+     
   );
 };
 

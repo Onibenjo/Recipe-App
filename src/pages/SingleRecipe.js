@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { recipeData } from "../data/tempDetails";
+// import { recipeData } from "../data/tempDetails";
 import { Link } from "react-router-dom";
 
 const SingleRecipe = ({ match }) => {
@@ -13,20 +13,20 @@ const SingleRecipe = ({ match }) => {
     publisher_url,
     title,
     source_url,
-    recipe_id,
     image_url,
     ingredients
   } = recipe;
 
   useEffect(() => {
-    const url = `https://www.foodfork.com/api/get?key=${
+    const url = `https://www.food2fork.com/api/get?key=${
       process.env.REACT_APP_API_KEY
     }&rId=${id}`;
+
     try {
       const fetchData = async () => {
         const res = await fetch(url);
-        const { recipeData } = await res.json();
-        setRecipe(recipeData);
+        const data = await res.json();
+        setRecipe(data.recipe);
         setLoading(false);
       };
 
@@ -53,8 +53,7 @@ const SingleRecipe = ({ match }) => {
               <Link
                 to="/recipes"
                 className="btn btn-warning mb-5 text-capitalize">
-                {" "}
-                back to recipes
+                <i class="fa fa-long-arrow-left" aria-hidden="true" /> recipes
               </Link>
               <img
                 src={image_url}
@@ -72,15 +71,15 @@ const SingleRecipe = ({ match }) => {
                 href={publisher_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-capilize mt-3 ">
-                publisher url
+                className=" text-capilize mt-3 btn-outline-success">
+                <i class="fa fa-globe" aria-hidden="true" /> publisher url
               </a>
               <a
                 href={source_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-capilize mt-3 mx-2">
-                recipe url
+                className=" text-capilize mt-3 mx-2btn-outline-primary">
+                <i class="fa fa-globe" aria-hidden="true" /> recipe url
               </a>
               <ul className="list-group mt-4">
                 <h2 className="mt-3 mb-4 mx-auto">Ingredients</h2>

@@ -15,7 +15,6 @@ const RecipeList = ({ recipes }) => {
             <Recipe key={recipe.recipe_id} recipe={recipe} />
           ))}
         </div>
-        <h1>Single</h1>
       </div>
     </>
   );
