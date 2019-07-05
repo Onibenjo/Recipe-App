@@ -17,7 +17,7 @@ const Footer = () => {
     <footer style={styles}>
       Made with{" "}
       <i className="fa fa-heart" style={{ color: "red", margin: "0.5rem" }} />{" "}
-      by Asah Victor & Oni Benjamin
+      by Asah Victor & Oni Benjamin. And not Dammy Ayans
     </footer>
   );
 };
