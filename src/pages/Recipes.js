@@ -18,6 +18,7 @@ const Recipes = () => {
     error: ""
   });
   const [isError, setError] = useState("");
+  const [isLoading, setLoading] = useState(true);
 
   const getRecipes = async () => {
     try {
@@ -30,6 +31,7 @@ const Recipes = () => {
       }
       setRecipes(recipes);
       setError("");
+      setLoading(false);
     } catch (err) {
       setError("Sorry, error fethcing recipes");
     }
@@ -67,6 +69,16 @@ const Recipes = () => {
             </div>
           </div>
         </section>
+      ) : isLoading ? (
+        <div className="container my-5">
+          <div className="row">
+            <div className="col-10 mx-auto col-md-6 my-3">
+              <h2 className="text-uppercase text-center text-orange">
+                Loading recipes...
+              </h2>
+            </div>
+          </div>
+        </div>
       ) : (
         <RecipeList recipes={recipes} />
       )}

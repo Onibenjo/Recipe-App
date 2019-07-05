@@ -53,7 +53,7 @@ const SingleRecipe = ({ match }) => {
               <Link
                 to="/recipes"
                 className="btn btn-warning mb-5 text-capitalize">
-                <i class="fa fa-long-arrow-left" aria-hidden="true" /> recipes
+                <i class="fa fa-arrow-left" aria-hidden="true" /> recipes
               </Link>
               <img
                 src={image_url}
@@ -71,14 +71,14 @@ const SingleRecipe = ({ match }) => {
                 href={publisher_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-capilize mt-3 btn-outline-success">
+                className=" text-capilize mt-3 btn btn-outline-success">
                 <i class="fa fa-globe" aria-hidden="true" /> publisher url
               </a>
               <a
                 href={source_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-capilize mt-3 mx-2btn-outline-primary">
+                className=" text-capilize mt-3 btn mx-2 btn-outline-primary">
                 <i class="fa fa-globe" aria-hidden="true" /> recipe url
               </a>
               <ul className="list-group mt-4">
