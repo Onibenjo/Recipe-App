@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="container navbar navbar-expand-sm navbar-light bg-light justify-content-between px-5">
+    <nav className="navbar navbar-expand-sm navbar-light bg-light justify-content-around px-5">
       <Link to="/" className="navbar-brand">
         <img src={logo} alt="Recipe App" />
       </Link>
