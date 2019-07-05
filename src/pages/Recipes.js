@@ -39,16 +39,15 @@ const Recipes = () => {
 
   useEffect(() => {
     getRecipes();
-  }, []);
+  }, [url]);
 
   const handleChange = e => setSearch(e.target.value);
   const handleSubmit = e => {
     e.preventDefault();
     const { base_url, query } = url;
 
-    setUrl({ ...url, search_url: `${base_url}${query}${search}` }, () =>
-      getRecipes()
-    );
+    setUrl({ ...url, search_url: `${base_url}${query}${search}` });
+    console.log(url);
     setSearch("");
   };
 

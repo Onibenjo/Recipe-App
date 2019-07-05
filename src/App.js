@@ -7,6 +7,7 @@ import Recipes from "./pages/Recipes";
 import Default from "./pages/Default";
 import SingleRecipe from "./pages/SingleRecipe";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
           <Route exact path="/recipes/:id" component={SingleRecipe} />
           <Route component={Default} />
         </Switch>
+
+        <Footer />
       </>
     </Router>
   );
