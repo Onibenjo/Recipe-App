@@ -1,13 +1,10 @@
 import React from "react";
 
 const Header = ({ children, title, styleClass }) => {
-  const pageHeight = window.innerHeight;
   return (
     <header>
       <div className="container-fluid">
-        <div
-          className={`row align-items-center ${styleClass}`}
-          style={{ minHeight: `${pageHeight - 100}px` }}>
+        <div className={`row align-items-center ${styleClass}`}>
           <div className="col text-center">
             <h1 className="text-light text-uppercase display-3 letter-spacing text-slanted">
               {title}

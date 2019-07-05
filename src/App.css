@@ -13,12 +13,25 @@ body {
 
 .header-hero,
 .default-hero {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("./images/homeBcg.jpeg") center/cover no-repeat; */
-  background: linear-gradient(rgba(241, 81, 37, 0.2), rgba(241, 81, 37, 0.8)),
+  background: linear-gradient(rgba(241, 81, 37, 0.2), rgba(187, 45, 6, 0.519)),
     url("./images/homeBcg.jpeg") center/cover no-repeat;
+  height: calc(100vh - 70px);
 }
 .default-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.65)),
     url("./images/defaultBcg.jpeg") center/cover no-repeat;
+}
+
+.showNavbar {
+  transition: all 0.4s ease-in-out;
+}
+.showNav {
+  outline: none !important;
+  border: none !important;
+}
+
+@media screen and (max-width: 575px) {
+  .menu {
+    display: none;
+  }
 }
